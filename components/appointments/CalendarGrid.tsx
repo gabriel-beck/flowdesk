@@ -138,7 +138,7 @@ export function CalendarGrid({
   const rows = Array.from({ length: 6 }, (_, i) => cells.slice(i * 7, i * 7 + 7));
 
   return (
-    <div className="rounded-xl overflow-hidden flex flex-col"
+    <div className="rounded-xl overflow-hidden flex flex-col h-full"
       style={{ background: "var(--fd-bg-surface)", border: "1px solid var(--fd-border)" }}>
 
       {/* Nav — fixed */}

@@ -16,9 +16,12 @@ export default function AppointmentsPage() {
     <>
       <PageHeader title="Appointments" />
 
-      {/* Desktop: side by side filling viewport height */}
-      <div className="hidden lg:grid lg:grid-cols-5 gap-4" style={{ height: "calc(100vh - 180px)" }}>
-        <div className="lg:col-span-3 min-h-0">
+      {/* Desktop: both panels locked to the same height, content scrolls inside */}
+      <div
+        className="hidden lg:grid lg:grid-cols-5 gap-4"
+        style={{ height: "calc(100vh - 180px)" }}
+      >
+        <div className="lg:col-span-3 h-full min-h-0">
           <CalendarGrid
             currentDate={currentDate}
             days={days}
@@ -29,7 +32,7 @@ export default function AppointmentsPage() {
             onToday={goToToday}
           />
         </div>
-        <div className="lg:col-span-2 min-h-0">
+        <div className="lg:col-span-2 h-full min-h-0">
           <DayPanel
             selectedDay={selectedDay}
             appointments={appointmentsForSelectedDay}
